@@ -1,0 +1,124 @@
+feature engineering:	using data provided create new variables that we can use for modeling e.g. in FBG cycling data, we have FWHM and peak center measured against
+			temperature. We engineer a variable of our own, s (fractional width) by dividing FWHM/peak_center.
+
+in gitbash:
+
+pwd: print working directory
+cd: change directory, take you to home directory
+cd ..: moves up the directory by one
+cd ~: the reference ~ is to home director hence the command on the left reads as "change directory to home directory" while "~/some_director" reads go to directory labeled "some"directory" located off the home directory
+cd + /something/somthing: "+ path" will navigate from wherever you are to the new path. 
+ping your computer to see if it's awak: ping 127.0.0.1
+ctrl C: to interept a process
+./ : means start from the current working directory whereas ~/ means start from home directory
+
+github: shanonentrop /// pw: qedcboulder2019
+slack pw: python@2019
+
+
+ls: list all files in the directory --- 
+ls *: goes though all the files in the directory
+ls -a: show all files including those currently hidden
+touch coco.txt: creats a txtfile named coco
+rm coco.txt: removes a file names coco
+mkdir foldername: creates a folder named "foldername"
+rm -r foldername: premenently removes the folder names "foldername" and all files within it
+cp ~/desktop/blank.txt ~/desktop/general_assembly: means copy file blank.txt from given location to the second location
+mv: replace cp with mv if all you want is to move the file 
+clear: clears out the screen  
+
+GIT HUB///////////   Desktop
+
+to have github locally start tacking files
+
+git init                  # initializes git
+git status                # gives status on what git is doing
+git add filename	  # start tracking the given file
+git add .		  # starts tracking all files in the directory
+git status
+
+git commit -m"names of files to be saved"  # saves changes to github
+git log 		  # shows commit history
+
+echo "some text" >> filename # add the text given in quotes to the file 
+
+/// to push the code to git hub for remote backup # create a directory for the code
+
+### copy the commands for 
+
+git remote add origin https://github.com/shanonentropy/DIRECTORY_NAME.git
+git push -u origin master
+
+### to synch local and global repos
+
+git push origin master  ### origin is nickname for GitHub.com/// master is the default branch///branching to be covered later
+
+### if changes were made at origin, to update the local copy
+
+git pull
+
+
+### forking is simply the act of copying a code from someone else's github repo to your account
+
+### cloning is downloading a copy of the code to the local repo
+
+###  git config --global user.name 'username' # sets up 
+
+### git config user.name # gives you your usersname
+
+
+### to escape vim hit [ESC] then [shift :] [q!]
+
+
+######################################################### bash commands
+
+cat: to see into a file or to concat multiple files. 
+	NOTE: you can cat multiple files and then output them using '<file1> <optional_files>>> <taget_file> 
+	NOTE: use of single arrow > in the command above means you will overwrite the target file
+		to append a line use echo 'text to be appended' >> <target_file>
+wc: word count command returns number of lines, words [set of characters bounded by a space or other deliminter]
+	NOTE: wc -l returns the number of lines
+	      wc -w returns the number of words
+	      wc -c returns the number of characters
+
+uniq: returns uniq set
+
+sort: sorts the designated target  
+
+grep: grep [optional flags] pattern <file_name>
+
+to search for something  use the find command
+		find
+		find -type f or find -type d ///// selects for files or directories
+
+		like a csv or tsv file:          find . -name *.?sv 
+
+
+############################# Python #######################333
+;\ allows you to write two lines of code in the command line and execute simultaneously
+
+math.isclose(input, input, rel_tol=*) can be used to get around floating point imprecision or to find out if two variables are within some interval of each other
+
+for a func, it will terminate if it hits a valid return statement
+
+
+  
+########################### modeling #############################
+
+
+
+ML -->  supervised --regression __ Classification
+ML -->> unsupervised
+
+
+regression = predicts a continous variable
+classification= predicts a discreet bin 
+
+################
+
+Vectorize categories in fbg dataset and then include them in the model to see if the global fitting improves, if so then the we would show that the categorical variables have some correlation with device performance using an inference model
+
+Back this up with clustering
+
+Using the individual run data do a logistical reg with slopes vs categorial variables to see if the slopes are correlated with cat. var. and if so what is the statistical sign of that
+
