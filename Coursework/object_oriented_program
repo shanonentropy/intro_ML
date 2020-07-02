@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr 12 22:17:46 2020
+
+@author: zeeshanahmed
+"""
+
+class mathy:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+        self.one = 1
+    def adder(self):
+        return self.num1 + self.num2
+    def add_one(self):
+        return self.num1 + self.one
